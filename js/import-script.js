@@ -1,8 +1,8 @@
 function include_html() {
   //  object loop in js
   const obj = {
-    '.import_navbar': '/components/navbar.html',
-    '.import_footer': '/components/footer.html',
+    '.import_navbar': './components/navbar.html',
+    '.import_footer': './components/footer.html',
   }
 
   // https://www.youtube.com/watch?v=lwRiLHwHOjQ&ab_channel=CSwithNJ
