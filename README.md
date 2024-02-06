@@ -27,7 +27,7 @@ Welcome to my Data Science Portfolio repository! Here, you'll find a collection 
 
 ### Get Involved:
 
-Whether you're a fellow data enthusiast, a potential employer, or simply curious about the world of data science, I invite you to explore my portfolio, engage with the projects, and reach out with any questions or collaboration opportunities. Let's leverage the power of data to drive meaningful insights and innovations together!
+Whether you're a fellow data enthusiast, a potential employer, or simply curious about the world of data science, I invite you to explore my portfolio, engage with the projects, and reach out with any questions or collaboration opportunities. Let's leverage the power of data to drive meaningful insights and innovations together.
 
 ### Connect With Me:
 
