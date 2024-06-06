@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Note-Taking Web App</title>
+    <meta content="Note-Taking Web App" property="og:title" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="css/webflow.css" rel="stylesheet" type="text/css" />
+    <link
+      href="css/sundram-portfolio.webflow.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="js/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            'Roboto Mono:300,regular,500',
+            'Dosis:regular,500,600,700',
+            'IBM Plex Mono:regular',
+          ],
+        },
+      })
+    </script>
+    <link
+      href="images/sundram_favicon_32x32.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link href="images/sundram_favicon_256x256.png" rel="apple-touch-icon" />
+    <style>
+      @media (max-width: 479px) {
+        .breakWordHere,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        .paragraph {
+          word-break: break-word !important;
+          -webkit-hyphens: auto !important;
+          -moz-hyphens: auto !important;
+          -ms-hyphens: auto !important;
+          -o-hyphens: auto !important;
+          hyphens: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="Nav" class="nav widthregulator w-clearfix import_navbar"></nav>
+
+    <div class="content">
+      <div class="textsection">
+        <h1 class="heading-10">Note-Taking Web App</h1>
+        <h3 class="projecttags">
+          React Js : Express Js : MySQL :
+          <a
+            href="https://writer.up.railway.app/"
+            target="_blank"
+            style="color: #9099ff; text-decoration: none"
+            >Live</a
+          >
+        </h3>
+        <p class="paragraph-2">
+          In the modern digital landscape, the need for efficient and
+          collaborative note-taking solutions has never been more critical. Our
+          project,
+          <a href="#" target="_blank" class="linkinlinetext">Writer</a>
+          addresses this need by providing a robust, user-friendly web
+          application designed to enhance productivity, streamline data
+          management, and foster seamless collaboration.<br />
+          <br />
+
+          This blog post offers an in-depth look into the development of Writer,
+          covering its objectives, features, development process, tools used,
+          challenges faced, and future plans.
+        </p>
+      </div>
+      <div class="spacer"></div>
+      <div class="imagesection">
+        <div
+          style="padding-top: 56.17021276595745%"
+          id="w-node-57d606049379-6e51a3ba"
+          class="w-video w-embed"
+        >
+          <iframe
+            class="embedly-embed"
+            src="https://player.vimeo.com/video/954045923?h=a6d61e1e41"
+            scrolling="no"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen="true"
+          ></iframe>
+        </div>
+        <div class="spacer"></div>
+      </div>
+      <div class="textsection">
+        <h2>What Were the Objectives of the Project?</h2>
+        <p>
+          The journey of creating Writer began with a simple idea: to develop a
+          tool that would help users manage their <strong>notes</strong> and
+          <strong>collaborate</strong> with others more effectively.
+          <em></em>
+        </p>
+
+        <span>The key objectives driving this project include:</span>
+        <ul class="list">
+          <li>
+            <strong>Enhancing Productivity:</strong> By providing users with a
+            centralized platform for note management, Writer aims to boost
+            productivity by minimizing the time spent on searching for and
+            organizing information.
+          </li>
+          <li>
+            <strong>Streamlining Data Management:</strong> Features such as
+            folder organization and advanced search capabilities streamline the
+            process of managing large volumes of notes and documents.
+          </li>
+          <li>
+            <strong>Fostering Collaboration:</strong> By enabling real-time
+            editing and sharing of notes, Writer promotes teamwork and knowledge
+            sharing within organizations and communities.
+          </li>
+        </ul>
+
+        <div class="spacer"></div>
+      </div>
+
+      <div class="textsection">
+        <h2>What Are the Key Features of the Note-Taking Web App?</h2>
+        <p>
+          Writer is packed with features designed to meet the diverse needs of
+          its users:
+        </p>
+        <ol>
+          <li>
+            <strong>User Registration and Authentication:</strong> Ensuring data
+            privacy and security through secure registration and login
+            processes.
+          </li>
+          <li>
+            <strong>Folder and Note Management:</strong> Users can create, edit,
+            delete, and organize notes within folders, making note management
+            efficient and effective.
+          </li>
+          <li>
+            <strong>Search Functionality:</strong> A powerful search feature
+            helps users find specific folders and notes, including those
+            archived or in the trash.
+          </li>
+          <li>
+            <strong>Bookmarking:</strong> Users can bookmark important shared
+            notes for easy reference and quick access.
+          </li>
+          <li>
+            <strong>Note Sharing and Collaboration:</strong>
+            Real-time updates on shared notes allow seamless collaboration. Note
+            owners have control over shared notes and can delete shared links as
+            needed.
+          </li>
+        </ol>
+        <div class="spacer"></div>
+      </div>
+
+      <div class="textsection">
+        <h2>How Was the Development Process Structured?</h2>
+        <p>
+          Developing Writer involved several key stages, each crucial to the
+          project's success:
+        </p>
+        <ul>
+          <li>
+            <strong>Planning and Design:</strong> This phase involved extensive
+            research and planning to define the application's structure and
+            functionality. The design focused on creating an intuitive and
+            visually appealing user interface.
+          </li>
+          <li>
+            <strong>Development:</strong> Utilizing cutting-edge web
+            technologies, the development phase brought the application to life.
+            Key technologies included.
+            <ol>
+              <li>
+                <strong>Frontend:</strong> JavaScript with React.js, HTML, and
+                CSS for creating dynamic and interactive user interfaces.
+              </li>
+              <li>
+                <strong>Backend:</strong> Node.js with the Express.js framework
+                for server-side logic and API endpoints.
+              </li>
+              <li>
+                <strong>Database:</strong> MySQL for managing data efficiently.
+              </li>
+            </ol>
+          </li>
+          <li>
+            <strong>Filter Your Data:</strong> Choose seasons, teams, or players
+            to filter your data and focus on specific insights.
+          </li>
+          <li>
+            <strong>Testing:</strong> Rigorous testing ensured the reliability
+            and functionality of the application. This included unit tests,
+            integration tests, and user acceptance testing.
+          </li>
+          <li>
+            <strong>Deployment:</strong> The application was deployed on robust
+            server hardware, ensuring high performance and reliability during
+            peak usage times.
+          </li>
+        </ul>
+
+        <div class="spacer"></div>
+      </div>
+
+      <div class="textsection">
+        <h2>What Tools and Environments Were Used?</h2>
+        <p>
+          A variety of tools and environments were strategically employed to
+          streamline the development and deployment process:
+        </p>
+        <ul>
+          <li>
+            <strong>Operating Systems:</strong> Developers had the freedom to
+            choose between Windows, macOS, or Linux, providing a stable
+            development environment.
+          </li>
+          <li>
+            <strong>Code Editors:</strong> Options like
+            <a
+              href="https://code.visualstudio.com/"
+              target="_blank"
+              class="linkinlinetext"
+              >Visual Studio Code</a
+            >
+            ,
+            <a
+              href="https://atom-editor.cc/"
+              target="_blank"
+              class="linkinlinetext"
+              >Atom</a
+            >,
+            <a
+              href="https://www.sublimetext.com/"
+              target="_blank"
+              class="linkinlinetext"
+              >Sublime Text</a
+            >
+            and
+            <a
+              href="https://www.jetbrains.com/webstorm/"
+              target="_blank"
+              class="linkinlinetext"
+              >JetBrains WebStorm</a
+            >
+            enhanced productivity and code quality.
+          </li>
+          <li>
+            <strong>API Development Tools:</strong>
+            <a
+              href="https://www.postman.com/"
+              target="_blank"
+              class="linkinlinetext"
+              >Postman</a
+            >
+            and
+            <a
+              href="https://insomnia.rest/"
+              target="_blank"
+              class="linkinlinetext"
+              >Insomnia</a
+            >
+            facilitated testing and debugging of API endpoints.
+          </li>
+          <li>
+            <strong>Version Control:</strong>
+            <a
+              href="https://www.git-scm.com/"
+              target="_blank"
+              class="linkinlinetext"
+              >Git</a
+            >, along with platforms like
+            <a href="https://github.com/" target="_blank" class="linkinlinetext"
+              >GitHub</a
+            >,
+            <a
+              href="https://about.gitlab.com/"
+              target="_blank"
+              class="linkinlinetext"
+              >GitLab</a
+            >
+            or
+            <a
+              href="https://bitbucket.org/"
+              target="_blank"
+              class="linkinlinetext"
+              >Bitbucket</a
+            >
+            facilitated collaboration, code review, and version management​​.
+          </li>
+        </ul>
+        <div class="spacer"></div>
+      </div>
+
+      <div class="textsection">
+        <h2>What Challenges Were Faced and How Were They Solved?</h2>
+        <p>
+          During the development of Writer, several challenges were encountered
+          and successfully overcome:
+        </p>
+        <ul>
+          <li>
+            <strong>Scalability Issues:</strong> Ensuring the application could
+            handle a large number of users and data entries was critical. This
+            was addressed by optimizing database queries and implementing
+            efficient server-side logic.
+          </li>
+          <li>
+            <strong>User Experience Design:</strong> Creating an intuitive user
+            interface required several iterations and user feedback sessions to
+            ensure a seamless user experience across different devices and
+            screen sizes.
+          </li>
+          <li>
+            <strong>Data Security:</strong> Implementing robust security
+            measures to protect user data was paramount. This involved secure
+            authentication processes and data encryption techniques.
+          </li>
+        </ul>
+        <div class="spacer"></div>
+      </div>
+
+      <div class="textsection">
+        <h2>What Are the Future Plans for Writer?</h2>
+        <p>
+          Looking ahead, several enhancements and additional features are
+          planned to further improve Writer:
+        </p>
+        <ul>
+          <li>
+            <strong>Mobile Application Development:</strong> While currently out
+            of scope, developing dedicated mobile applications for iOS and
+            Android is a future goal.
+          </li>
+          <li>
+            <strong>Real-time Collaborative Editing:</strong> Enhancing the
+            real-time collaboration feature to allow multiple users to edit
+            notes simultaneously.
+          </li>
+          <li>
+            <strong>Offline Mode:</strong> Implementing an offline mode to
+            enable users to access and edit notes without an internet
+            connection.
+          </li>
+        </ul>
+        <div class="spacer"></div>
+      </div>
+      <div class="textsection">
+        <h2>Credits</h2>
+        <p>
+          The project UI for Writer is inspired by the UI of
+          <a
+            href="https://github.com/saefulbarkah/nowted-app/"
+            target="_blank"
+            style="color: #9099ff; text-decoration: none"
+            >Saeful Barkah's Nowted App</a
+          >
+          on GitHub. While I drew inspiration from this UI design, I made
+          several modifications and added numerous functionalities using
+          React.js to tailor it to the specific needs of Writer.
+          <strong>The backend, however, is entirely my own creation,</strong>
+          developed to ensure robust performance and seamless integration with
+          the enhanced frontend.<br />
+          <br />
+
+          <em
+            >A special thank you to <u>Saeful Barkah</u> for providing the
+            initial inspiration and foundation that helped shape the user
+            interface of Writer.</em
+          >
+        </p>
+        <div class="spacer"></div>
+      </div>
+
+      <div class="textsection">
+        <h2>Conclusion - Note-Taking Web App</h2>
+        <p>
+          The development of Writer has been a testament to the power of
+          innovation, collaboration, and a user-centric approach. By providing a
+          comprehensive note-taking and collaboration solution, Writer is set to
+          transform how individuals and teams manage their information and work
+          together.<br />
+          <br />
+          Stay tuned for future updates and enhancements as we continue to
+          evolve and meet the growing needs of our users.<br />
+          <br />
+
+          <em>
+            Source Code:
+
+            <a
+              href="https://github.com/FireIndex/writer/"
+              target="_blank"
+              style="color: #9099ff; text-decoration: none"
+              >GitHub</a
+            >
+          </em>
+        </p>
+        <div class="spacer"></div>
+      </div>
+    </div>
+    <footer id="Footer" class="footer import_footer"></footer>
+
+    <script src="js/import-script.js"></script>
+  </body>
+</html>
