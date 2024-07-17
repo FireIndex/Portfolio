@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>India's Crime Trend Dashboard</title>
+    <meta content="India's Crime Trend Dashboard" property="og:title" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="css/webflow.css" rel="stylesheet" type="text/css" />
+    <link
+      href="css/sundram-portfolio.webflow.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="js/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            'Roboto Mono:300,regular,500',
+            'Dosis:regular,500,600,700',
+            'IBM Plex Mono:regular',
+          ],
+        },
+      })
+    </script>
+    <link
+      href="images/sundram_favicon_32x32.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link href="images/sundram_favicon_256x256.png" rel="apple-touch-icon" />
+    <style>
+      @media (max-width: 479px) {
+        .breakWordHere,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        .paragraph {
+          word-break: break-word !important;
+          -webkit-hyphens: auto !important;
+          -moz-hyphens: auto !important;
+          -ms-hyphens: auto !important;
+          -o-hyphens: auto !important;
+          hyphens: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="Nav" class="nav widthregulator w-clearfix import_navbar"></nav>
+
+    <div class="content">
+      <div class="textsection">
+        <h1 class="heading-10">India's Crime Trend Dashboard</h1>
+        <h3 class="projecttags">
+          Python : Pandas : Plotly : Streamlit :
+          <a
+            href="https://fireindex-indias-crime-trend-dashboard.streamlit.app/"
+            target="_blank"
+            style="color: #9099ff; text-decoration: none"
+            >Live</a
+          >
+        </h3>
+        <p class="paragraph-2">
+          Understanding the alarming trends of crime in India, particularly rape
+          and suicide, is crucial. Rape is the fourth most common crime against
+          women in India. According to the
+          <a href="https://ncrb.gov.in/" target="_blank" class="linkinlinetext"
+            >National Crime Records Bureau (NCRB),</a
+          >
+          one rape was reported every 16 minutes in 2019, and every 15 minutes
+          in 2018.<br />
+          <br />
+          The
+          <a
+            href="https://fireindex-indias-crime-trend-dashboard.streamlit.app/"
+            target="_blank"
+            class="linkinlinetext"
+            >interactive dashboard,</a
+          >
+          powered by Streamlit, offers a comprehensive analysis and visual
+          representation of crime data from 2001 to 2012. This blog post
+          explores the key features and benefits of using this dashboard,
+          focusing on rape and suicide statistics across various states and
+          years.<br />
+          <br />I made some suggestions how these interactions could be like and
+          illustrated them in short interaction videos.
+        </p>
+      </div>
+      <div class="spacer"></div>
+      <div class="imagesection">
+        <div
+          style="padding-top: 56.17021276595745%"
+          id="w-node-57d606049379-6e51a3ba"
+          class="w-video w-embed"
+        >
+          <iframe
+            class="embedly-embed"
+            src="https://player.vimeo.com/video/985575559?h=a6d61e1e41"
+            scrolling="no"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen="true"
+          ></iframe>
+        </div>
+        <div class="spacer"></div>
+      </div>
+      <div class="textsection">
+        <p class="paragraph-2"></p>
+        <h2>What is the India's Crime Trend Dashboard?</h2>
+        <p>
+          <em></em>
+          The India's Crime Trend Dashboard is a user-friendly platform that
+          provides an in-depth analysis of rape and suicide victim data. It
+          utilizes Python libraries such as <strong>Pandas</strong> and
+          <strong>Plotly Express</strong> to offer visualizations and statistics
+          across different states and years.
+        </p>
+
+        <span>With this dashboard, you can:</span>
+        <ul class="list">
+          <li>
+            <strong>Explore Crime Categories:</strong> Select various crime
+            categories for analysis.
+          </li>
+          <li>
+            <strong>Analyze Rape Victims:</strong> Investigate trends in
+            reported rape cases across different states and years.
+          </li>
+          <li>
+            <strong>Analyze Suicide Cases:</strong> Examine trends in reported
+            suicide cases across different states and years.
+          </li>
+        </ul>
+
+        <div class="spacer"></div>
+      </div>
+      <div class="textsection">
+        <h2>Key Features of the India's Crime Trend Dashboard</h2>
+        <p>
+          Let's take a closer look at some of the key features offered by the
+          dashboard:
+        </p>
+        <ol>
+          <li>
+            <strong>User-Friendly Interface:</strong> Navigate through different
+            sections with ease. Select areas of interest such as rape victims,
+            suicide victims, and more from the sidebar
+          </li>
+          <li>
+            <strong>Detailed Insights:</strong> Get comprehensive insights into
+            each area. Choose specific states or view nationwide data and
+            explore trends over selected years.
+          </li>
+          <li>
+            <strong>Visualizations and Metrics:</strong> Utilize Plotly Express
+            to create interactive visualizations like bar charts, line graphs,
+            and scatter plots. Customize charts by selecting different types and
+            metrics, and view state-wise data on an Indian map.
+          </li>
+          <li>
+            <strong>Data Filtering:</strong> Filter data by state, year, or
+            specific metrics to gain targeted insights.
+          </li>
+          <li>
+            <strong>Comprehensive State Comparisons:</strong>
+            Compare reported victim cases across all states using an interactive
+            Indian map.
+          </li>
+        </ol>
+        <div class="spacer"></div>
+      </div>
+      <div class="textsection">
+        <h2>How to Use the India's Crime Trend Dashboard</h2>
+        <ul>
+          <li>
+            <strong>Navigate to the Dashboard:</strong> Access the dashboard by
+            running the provided code in a Streamlit environment.
+          </li>
+          <li>
+            <strong>Choose an Area of Interest:</strong> Select sections like
+            Home, Reports, or Dataset from the sidebar.
+          </li>
+          <li>
+            <strong>Explore Reports:</strong>
+            <ol>
+              <li>
+                <strong>Select Crime Category:</strong> Choose the crime
+                category you want to analyze.
+              </li>
+              <li>
+                <strong>Select State:</strong> Pick a specific state or view
+                nationwide data.
+              </li>
+              <li>
+                <strong>Select Year:</strong> Filter by year or select all years
+                to view trends over time.
+              </li>
+              <li>
+                <strong>Explore Insights:</strong> Browse visualizations and
+                statistics for your selected area, and customize charts as
+                needed.
+              </li>
+              <li>
+                <strong>Discover Trends:</strong> Analyze data for different
+                states and years to gain a deeper understanding of crime trends
+                in India.
+              </li>
+            </ol>
+          </li>
+          <li>
+            <strong>Access the Dataset:</strong> Download the dataset for
+            further analysis from the Dataset section.
+          </li>
+        </ul>
+        <div class="spacer"></div>
+      </div>
+      <div class="textsection">
+        <h2>Future Scope of the India's Crime Trend Dashboard</h2>
+        <p>
+          The India's Crime Trend Dashboard has the potential for further
+          enhancements and features. Some future scope areas include:
+        </p>
+        <ul>
+          <li>
+            <strong>Additional Crime Categories:</strong> Include more crime
+            categories for analysis, such as kidnapping, dowry death, cruelty by
+            husband and relatives, theft, assault, and more.
+          </li>
+          <li>
+            <strong>Extend Data Range:</strong> Extend the dataset to include
+            more recent years and updated crime statistics. This could provide a
+            more current and accurate analysis of crime trends in India.
+          </li>
+          <li>
+            <strong>Integrate Custom Visualizations:</strong> Allow users to
+            select parameters like x-axis, y-axis, color, and size for more
+            interactive charts.
+          </li>
+          <li>
+            <strong>Machine Learning Models:</strong> Incorporate machine
+            learning models for predictive analysis and trend forecasting. This
+            could help in identifying high-risk areas and taking preventive
+            measures.
+          </li>
+        </ul>
+        <div class="spacer"></div>
+      </div>
+      <div class="textsection">
+        <h2>Short conclusion - India's Crime Trend Dashboard</h2>
+        <p>
+          The India's Crime Trend Dashboard is a valuable resource for analyzing
+          and understanding crime trends in India. By providing detailed
+          insights and visualizations, this dashboard can help policymakers,
+          researchers, and concerned citizens make informed decisions to address
+          critical issues.<br />
+          <br />
+          With its user-friendly interface and comprehensive data analysis, the
+          dashboard is a powerful tool for exploring crime data and identifying
+          patterns over time. Leveraging the latest technologies and data
+          visualization techniques, this dashboard aims to raise awareness and
+          drive positive societal change.
+          <br />
+          <br />
+
+          <em>
+            Source Code:
+
+            <a
+              href=""
+              target="_blank"
+              style="color: #9099ff; text-decoration: none"
+              >GitHub (Private)</a
+            >
+          </em>
+        </p>
+        <div class="spacer"></div>
+      </div>
+    </div>
+    <footer id="Footer" class="footer import_footer"></footer>
+
+    <script src="js/import-script.js"></script>
+  </body>
+</html>
