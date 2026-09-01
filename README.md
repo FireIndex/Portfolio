@@ -1,37 +1,119 @@
-# Data Science Portfolio
+# Portfolio
 
-## Description
+A static personal portfolio site. Minimal, editorial, no build step and no dependencies.
 
-Welcome to my Data Science Portfolio repository! Here, you'll find a collection of projects that showcase my skills and experience in the field of data science. As a passionate data enthusiast, I've curated this portfolio to demonstrate my proficiency in various data science techniques, tools, and methodologies.
+```
+index.html      home page — curated case studies, about, skills, experience
+work.html       full project catalogue (compact rows, no imagery)
+styles.css      design tokens and all layout, both pages
+data.js         ← all content lives here
+main.js         renders both pages from data.js, plus nav/reveal behaviour
+assets/         favicon, Open Graph card, project images and diagrams
+PRINCIPLES.md   the design standard this site is held to
+CLAUDE.md       conventions + gotchas for working on it with Claude Code
+.claude/skills/ task skills (add-project, curate-work, design-check, ...)
+old/            previous site + resumes — content source, not deployed
+```
 
-### Key Features:
+## Two pages, one data source
 
-1. **Diverse Projects:** Explore a range of projects covering different domains within data science, including machine learning, data visualization, natural language processing, and more.
+The home page features a handful of projects as proper case studies; the
+catalogue lists everything. Both render from the same `PORTFOLIO` object via the
+same `main.js` — a project's `featured` flag decides where it appears, and
+`context` (`personal` / `work` / `open-source`) sets its grouping and
+attribution. Numbers on both pages are derived from order, so nothing needs
+renumbering when you add or reorder.
 
-2. **Hands-on Experience:** Each project in this portfolio reflects my hands-on experience in tackling real-world data challenges. From data collection and preprocessing to model building and evaluation, I've documented my journey every step of the way.
+## Design principles
 
-3. **Innovative Solutions:** Discover innovative solutions to complex problems through detailed project descriptions, code samples, and insights into the decision-making process behind each analysis.
+[PRINCIPLES.md](PRINCIPLES.md) is the standard the site is held to: content
+must be real, typography carries the design, the accent stays rare, every text
+style meets WCAG AA, and it must still work with JavaScript or animation off.
+Read it before making changes.
 
-4. **Open Source Collaboration:** I believe in the power of collaboration and open source contribution. Feel free to explore, fork, or contribute to any of the projects within this repository. Your feedback and suggestions are highly valued!
+## Skills
 
-### Projects Included:
+Seven skills in `.claude/skills/` cover the routine edits, each with the
+conventions and the verification steps built in:
 
-- **Predictive Modeling:** Utilize machine learning algorithms to predict outcomes, such as customer churn, stock prices, or disease diagnosis.
-- **Data Visualization:** Create visually appealing and informative visualizations using libraries like Matplotlib, Seaborn, and Plotly to uncover insights from data.
+| Skill | For |
+|---|---|
+| `/add-project` | add, edit, remove or reorder a Selected Work entry |
+| `/curate-work` | choose what the home page features vs the catalogue |
+| `/update-info` | name, role, headline, about, email, socials, availability |
+| `/add-experience` | jobs in the timeline, education entries |
+| `/add-skill` | technologies and skill groups |
+| `/optimize-assets` | screenshot → WebP, SVG diagrams, favicon, OG card |
+| `/design-check` | full audit: contrast, overflow, a11y, fallbacks, weight |
 
-- **Natural Language Processing (NLP):** Dive into projects involving text analysis, sentiment analysis, document classification, and more using NLP techniques and libraries like NLTK and spaCy.
+Run `/design-check` before considering a change finished.
 
-- **Time Series Analysis:** Explore forecasting techniques and anomaly detection in time series data to derive actionable insights for decision-making.
+## Editing content
 
-- **Big Data Analytics:** Showcase proficiency in handling large-scale datasets using tools like Apache Spark for distributed computing and data processing.
+Everything you'd want to change is in [data.js](data.js) — one `PORTFOLIO`
+object with a section per part of the page. Nothing in `index.html` or
+`main.js` needs to be touched to swap in your own details.
 
-### Get Involved:
+Start with `meta` (name, role, location, email) and work down. To change how
+many projects, skills, jobs or schools appear, add or remove entries in the
+relevant array; the page adjusts itself.
 
-Whether you're a fellow data enthusiast, a potential employer, or simply curious about the world of data science, I invite you to explore my portfolio, engage with the projects, and reach out with any questions or collaboration opportunities. Let's leverage the power of data to drive meaningful insights and innovations together.
+Two things to update outside `data.js`, since crawlers read them before any
+JavaScript runs:
 
-### Connect With Me:
+- the `<title>`, `description`, `canonical` and `og:*`/`twitter:*` tags in
+  [index.html](index.html) — replace `https://example.com` with the real URL
+- the `Person` JSON-LD block at the bottom of `<head>`
 
-- LinkedIn: [My LinkedIn Profile](https://www.linkedin.com/in/sundram8298)
-- Email: [My Email Address](mailto:sundramkumar8298@gmail.com)
+## Project images
 
-Thank you for visiting my Data Science Portfolio repository. Happy exploring!
+Two kinds, both at 16:10 to match the frame (which crops with `object-fit:
+cover`):
+
+- **Screenshots** → WebP, quality 82, ~1600×1000. The five here came from the
+  old site: 2457KB → 389KB.
+- **Backend work with nothing to screenshot** → a hand-authored SVG diagram in
+  the site's palette, showing the actual mechanism (the failover path, the
+  dropped packet, the ordering constraint).
+
+The first project image loads eagerly; the rest are lazy. See
+`/optimize-assets` for the exact commands.
+
+To add a résumé, drop the PDF in `assets/` and uncomment the entry in
+`contact.profiles`.
+
+## Design tokens
+
+Colour, type scale and spacing are CSS custom properties at the top of
+[styles.css](styles.css). The palette is deliberately warm — off-white ivory
+rather than `#fff`, deep charcoal rather than `#000`.
+
+One constraint worth keeping if you change the accent: `--accent` is
+decorative only (hairlines, dots, the wash behind outcome text), while
+`--accent-deep` is the text-safe version. Every text style on the page clears
+WCAG AA (4.5:1 for body, 3:1 for large text) against its actual background,
+including the muted greys — that's why `--muted` and `--faint` are darker than
+they look like they should be.
+
+## Running it
+
+It's static, so open `index.html` directly, or serve the folder:
+
+```bash
+python -m http.server 8000
+```
+
+Deploy by uploading the folder to any static host — GitHub Pages, Netlify,
+Cloudflare Pages. No build step.
+
+## Notes
+
+- Fonts (Fraunces, Inter, JetBrains Mono) come from Google Fonts via an
+  `@import` in `styles.css`, with `preconnect` hints in the HTML.
+- `data.js` assigns `window.PORTFOLIO` explicitly — a top-level `const` isn't a
+  property of `window`, so `main.js` couldn't see it otherwise.
+- Scroll reveals are progressive enhancement: with JavaScript disabled the
+  `.no-js` class keeps everything visible, and `prefers-reduced-motion` turns
+  the transitions off.
+- Section reveals, the mobile nav and the active-section highlight are the only
+  JavaScript behaviours. There's no router, no framework, no tracking.

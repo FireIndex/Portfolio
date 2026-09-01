@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img"
+     aria-label="Multi-broker WebSocket feeds converge on a canonical-key normalization layer, then fan out to a Redis cache for fast reads and ClickHouse for historical analytics, with a cold-standby feed for failover.">
+  <rect width="800" height="500" fill="#f0ece3"/>
+  <g font-family="monospace" font-size="11" letter-spacing="1.4" fill="#6b6559">
+    <text x="48" y="60">BROKER FEEDS</text>
+    <text x="322" y="60">NORMALIZE</text>
+    <text x="612" y="60">SERVE</text>
+  </g>
+  <g>
+    <rect x="48" y="88" width="150" height="52" rx="4" fill="#faf8f4" stroke="#d3ccbe"/>
+    <rect x="48" y="156" width="150" height="52" rx="4" fill="#faf8f4" stroke="#d3ccbe"/>
+    <rect x="48" y="224" width="150" height="52" rx="4" fill="#faf8f4" stroke="#d3ccbe"/>
+  </g>
+  <g font-family="monospace" font-size="12" fill="#4a463f">
+    <text x="66" y="112">broker A</text><text x="66" y="128" fill="#6b6559" font-size="10">ws tick</text>
+    <text x="66" y="180">broker B</text><text x="66" y="196" fill="#6b6559" font-size="10">ws tick</text>
+    <text x="66" y="248">broker C</text><text x="66" y="264" fill="#6b6559" font-size="10">ws tick</text>
+  </g>
+  <rect x="48" y="316" width="150" height="52" rx="4" fill="#faf8f4" stroke="#d3ccbe" stroke-dasharray="5 4"/>
+  <g font-family="monospace" font-size="12" fill="#6b6559">
+    <text x="66" y="340">standby</text><text x="66" y="356" font-size="10">cold</text>
+  </g>
+  <g stroke="#455946" stroke-width="1.5" fill="none">
+    <path d="M198 114 C250 114 250 182 300 182"/>
+    <path d="M198 182 H300"/>
+    <path d="M198 250 C250 250 250 182 300 182"/>
+  </g>
+  <path d="M198 342 C256 342 256 200 300 190" stroke="#6b7f6b" stroke-width="1.5"
+        fill="none" stroke-dasharray="5 4"/>
+  <rect x="300" y="140" width="176" height="84" rx="4" fill="#faf8f4" stroke="#455946" stroke-width="1.5"/>
+  <g font-family="monospace" font-size="12" fill="#23211d">
+    <text x="318" y="170">canonical-key</text>
+    <text x="318" y="188">translation</text>
+  </g>
+  <text x="318" y="210" font-family="monospace" font-size="10" fill="#455946">one schema, N brokers</text>
+  <g stroke="#455946" stroke-width="1.5" fill="none">
+    <path d="M476 168 C540 168 540 122 600 122"/>
+    <path d="M476 196 C540 196 540 250 600 250"/>
+  </g>
+  <rect x="600" y="96" width="152" height="52" rx="4" fill="#faf8f4" stroke="#455946"/>
+  <rect x="600" y="224" width="152" height="52" rx="4" fill="#faf8f4" stroke="#d3ccbe"/>
+  <g font-family="monospace" font-size="12" fill="#23211d">
+    <text x="618" y="120">Redis</text>
+    <text x="618" y="248">ClickHouse</text>
+  </g>
+  <text x="618" y="136" font-family="monospace" font-size="10" fill="#455946">sub-10ms reads</text>
+  <text x="618" y="264" font-family="monospace" font-size="10" fill="#6b6559">historical</text>
+  <path d="M48 412H752" stroke="#d3ccbe"/>
+  <g font-family="monospace" font-size="11" letter-spacing="1.2" fill="#455946">
+    <text x="48" y="440">ZERO-DOWNTIME TICK STREAMING</text>
+    <text x="566" y="440">200–500 ACCOUNTS</text>
+  </g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img"
+     aria-label="A live WebSocket order stream containing a dropped packet writes to both Redis for millisecond reads and an append-only PostgreSQL audit trail, while a REST reconciliation loop detects the gap and re-applies corrected state.">
+  <rect width="800" height="500" fill="#f0ece3"/>
+  <g font-family="monospace" font-size="11" letter-spacing="1.4" fill="#6b6559">
+    <text x="48" y="56">ORDER STREAM</text>
+    <text x="330" y="56">DUAL MEMORY</text>
+    <text x="620" y="56">RECONCILE</text>
+  </g>
+  <rect x="48" y="112" width="156" height="68" rx="4" fill="none" stroke="#d3ccbe"/>
+  <g stroke="#455946" stroke-width="2" stroke-linecap="round">
+    <path d="M66 132v28"/><path d="M88 132v28"/><path d="M110 132v28"/>
+    <path d="M154 132v28"/><path d="M176 132v28"/><path d="M192 132v28"/>
+  </g>
+  <path d="M132 132v28" stroke="#d3ccbe" stroke-width="2" stroke-dasharray="3 3" stroke-linecap="round"/>
+  <text x="102" y="200" font-family="monospace" font-size="10" fill="#6b6559">dropped</text>
+  <g stroke="#455946" stroke-width="1.5" fill="none">
+    <path d="M204 146 C260 146 260 116 320 116"/>
+    <path d="M204 146 C260 146 260 236 320 236"/>
+  </g>
+  <rect x="320" y="90" width="184" height="66" rx="4" fill="#faf8f4" stroke="#455946" stroke-width="1.5"/>
+  <text x="338" y="116" font-family="monospace" font-size="12" fill="#23211d">Redis</text>
+  <text x="338" y="136" font-family="monospace" font-size="10" fill="#455946">millisecond reads</text>
+  <rect x="320" y="204" width="184" height="66" rx="4" fill="#faf8f4" stroke="#d3ccbe"/>
+  <text x="338" y="230" font-family="monospace" font-size="12" fill="#23211d">PostgreSQL</text>
+  <text x="338" y="250" font-family="monospace" font-size="10" fill="#6b6559">append-only audit</text>
+  <g stroke="#455946" stroke-width="1.5" fill="none">
+    <path d="M504 123 H600"/>
+    <path d="M504 237 H600"/>
+  </g>
+  <rect x="600" y="140" width="152" height="80" rx="4" fill="#faf8f4" stroke="#455946" stroke-width="1.5"/>
+  <g font-family="monospace" font-size="11" fill="#23211d">
+    <text x="618" y="168">REST diff</text>
+    <text x="618" y="186">self-heal</text>
+  </g>
+  <text x="618" y="206" font-family="monospace" font-size="10" fill="#455946">auto-repair</text>
+  <path d="M676 220 C676 300 400 300 400 272" stroke="#6b7f6b" stroke-width="1.5"
+        fill="none" stroke-dasharray="5 4"/>
+  <path d="M400 276 l-4.5 -9 h9 z" fill="#6b7f6b"/>
+  <text x="428" y="322" font-family="monospace" font-size="10" fill="#455946">re-apply corrected state</text>
+  <path d="M48 404H752" stroke="#d3ccbe"/>
+  <g font-family="monospace" font-size="11" letter-spacing="1.2" fill="#455946">
+    <text x="48" y="432">100% DATA INTEGRITY</text>
+    <text x="570" y="432">OUT-OF-ORDER SAFE</text>
+  </g>
+</svg>

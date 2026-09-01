@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img"
+     aria-label="A master account order passes through a strict cancel-modify-place sequencing gate, then is mirrored over gRPC to many follower accounts with proportional or weighted scaling.">
+  <rect width="800" height="500" fill="#f0ece3"/>
+  <g font-family="monospace" font-size="11" letter-spacing="1.4" fill="#6b6559">
+    <text x="48" y="58">MASTER</text>
+    <text x="316" y="58">REPLICATE / gRPC</text>
+    <text x="628" y="58">FOLLOWERS</text>
+  </g>
+  <rect x="48" y="184" width="150" height="70" rx="4" fill="#faf8f4" stroke="#455946" stroke-width="1.5"/>
+  <text x="66" y="212" font-family="monospace" font-size="12" fill="#23211d">master acct</text>
+  <text x="66" y="232" font-family="monospace" font-size="10" fill="#455946">place order</text>
+  <path d="M198 219 H300" stroke="#455946" stroke-width="1.5"/>
+  <rect x="300" y="150" width="180" height="138" rx="4" fill="#faf8f4" stroke="#455946" stroke-width="1.5"/>
+  <text x="318" y="178" font-family="monospace" font-size="11" fill="#23211d">strict sequence</text>
+  <g font-family="monospace" font-size="10" fill="#455946">
+    <text x="318" y="204">1 · CANCEL</text>
+    <text x="318" y="224">2 · MODIFY</text>
+    <text x="318" y="244">3 · PLACE</text>
+  </g>
+  <text x="318" y="272" font-family="monospace" font-size="10" fill="#6b6559">proportional | weighted</text>
+  <g stroke="#455946" stroke-width="1.5" fill="none">
+    <path d="M480 190 C560 190 560 118 628 118"/>
+    <path d="M480 210 C560 210 560 196 628 196"/>
+    <path d="M480 232 C560 232 560 274 628 274"/>
+    <path d="M480 252 C560 252 560 352 628 352"/>
+  </g>
+  <g>
+    <rect x="628" y="94" width="124" height="48" rx="4" fill="#faf8f4" stroke="#d3ccbe"/>
+    <rect x="628" y="172" width="124" height="48" rx="4" fill="#faf8f4" stroke="#d3ccbe"/>
+    <rect x="628" y="250" width="124" height="48" rx="4" fill="#faf8f4" stroke="#d3ccbe"/>
+    <rect x="628" y="328" width="124" height="48" rx="4" fill="#faf8f4" stroke="#d3ccbe"/>
+  </g>
+  <g font-family="monospace" font-size="11" fill="#4a463f">
+    <text x="646" y="123">acct 01</text>
+    <text x="646" y="201">acct 02</text>
+    <text x="646" y="279">acct 03</text>
+    <text x="646" y="357">acct n</text>
+  </g>
+  <path d="M48 424H752" stroke="#d3ccbe"/>
+  <g font-family="monospace" font-size="11" letter-spacing="1.2" fill="#455946">
+    <text x="48" y="452">CONFLICT-FREE EXECUTION</text>
+    <text x="590" y="452">2,000+ ORDERS · 4×</text>
+  </g>
+</svg>

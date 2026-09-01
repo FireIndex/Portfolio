@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#faf8f4"/>
+  <path d="M600 0V630M900 0V630" stroke="#e2ddd2" stroke-width="1"/>
+  <path d="M80 96H1120" stroke="#e2ddd2" stroke-width="1"/>
+  <text x="80" y="72" font-family="monospace" font-size="20" fill="#6b6559"
+        letter-spacing="3">PORTFOLIO / 2026</text>
+  <g font-family="Georgia, serif" fill="#23211d">
+    <text x="80" y="270" font-size="62">Building intelligent systems</text>
+    <text x="80" y="344" font-size="62">at the intersection of data,</text>
+    <text x="80" y="418" font-size="62" font-style="italic" fill="#455946">machine learning &amp; software.</text>
+  </g>
+  <path d="M80 500H1120" stroke="#e2ddd2" stroke-width="1"/>
+  <g font-family="monospace" font-size="21" letter-spacing="2.5">
+    <text x="80" y="556" fill="#4a463f">SUNDRAM KUMAR</text>
+    <text x="700" y="556" fill="#6b6559">BACKEND / QUANT PYTHON</text>
+  </g>
+  <circle cx="1104" cy="549" r="6" fill="#6b7f6b"/>
+</svg>
