@@ -15,7 +15,7 @@ const PORTFOLIO = {
     location: "Delhi, India",
     timezone: "IST · UTC+5:30",
     year: "2026",
-    url: "https://example.com",
+    url: "https://fireindex.github.io/Portfolio",
     description:
       "Portfolio of Sundram Kumar - backend and quantitative Python engineer building real-time trading infrastructure, low-latency data pipelines and distributed services.",
     ogImage: "assets/og.svg",

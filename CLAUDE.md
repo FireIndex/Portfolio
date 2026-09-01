@@ -64,8 +64,9 @@ Run `design-check` before calling any change finished.
 - **Identity info lives in two places.** `data.js` for the rendered page, and
   `index.html` for `<title>` / `description` / `og:*` / JSON-LD, because
   crawlers read the HTML before JS runs. Update both.
-- **`https://example.com` is still a placeholder** in `index.html` and
-  `meta.url`. Replace it when the real domain exists.
+- **The site URL is `https://fireindex.github.io/Portfolio/`** (GitHub Pages
+  project site), set in `index.html` and `meta.url`. Update both, plus
+  `sitemap.xml` and `robots.txt`, if the domain ever changes.
 - **Headless `--screenshot` / `--dump-dom` are unreliable here.** `--window-size`
   doesn't set the layout viewport and `vh` resolves to 0, producing false
   failures. Drive Chrome over CDP with `Emulation.setDeviceMetricsOverride`

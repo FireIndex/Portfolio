@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fireindex.github.io/Portfolio/sitemap.xml

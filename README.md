@@ -62,7 +62,8 @@ Two things to update outside `data.js`, since crawlers read them before any
 JavaScript runs:
 
 - the `<title>`, `description`, `canonical` and `og:*`/`twitter:*` tags in
-  [index.html](index.html) — replace `https://example.com` with the real URL
+  [index.html](index.html) — absolute URLs point at
+  `https://fireindex.github.io/Portfolio/`
 - the `Person` JSON-LD block at the bottom of `<head>`
 
 ## Project images
@@ -105,6 +106,22 @@ python -m http.server 8000
 
 Deploy by uploading the folder to any static host — GitHub Pages, Netlify,
 Cloudflare Pages. No build step.
+
+## Deploying
+
+Live at **https://fireindex.github.io/Portfolio/**, published by GitHub Actions
+on every push to `main` ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)).
+
+There's no build step — the workflow copies the served files into `_site` and
+uploads them as a Pages artifact. Repo docs (`README.md`, `PRINCIPLES.md`,
+`CLAUDE.md`, `.claude/`) are deliberately left out of that copy, so **a new
+top-level file that should ship must be added to the `Stage site` step.**
+
+One-time setup: **Settings → Pages → Source → GitHub Actions**.
+
+All paths in the HTML are relative, so the site works unchanged under the
+`/Portfolio/` subpath. Absolute URLs (canonical, `og:*`, JSON-LD, `sitemap.xml`,
+`robots.txt`) are the only place the full domain is written.
 
 ## Notes
 
