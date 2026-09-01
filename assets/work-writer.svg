@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img"
+     aria-label="The Writer editor: a folder sidebar, a list of notes, and an open note titled Reflection on the Month of June. Three people are reading and editing the same note at once — their initials sit in the margin beside the lines they are on, one of them offline with edits still queued locally.">
+  <rect width="800" height="500" fill="#f0ece3"/>
+
+  <!-- app surface -->
+  <rect x="40" y="40" width="720" height="420" rx="6" fill="#faf8f4" stroke="#d3ccbe"/>
+
+  <!-- title bar -->
+  <path d="M40 76 H760" stroke="#e2ddd2"/>
+  <text x="62" y="65" font-family="Georgia, serif" font-style="italic" font-size="15" fill="#23211d">Writer</text>
+  <path d="M112 61 l10 -8 1.5 2.2 -10 8 z" fill="#455946"/>
+
+  <!-- people reading this note, top right -->
+  <g>
+    <circle cx="654" cy="58" r="11" fill="#455946"/>
+    <text x="654" y="62" font-family="monospace" font-size="9" fill="#faf8f4" text-anchor="middle">SK</text>
+    <circle cx="678" cy="58" r="11" fill="#6b7f6b"/>
+    <text x="678" y="62" font-family="monospace" font-size="9" fill="#faf8f4" text-anchor="middle">AR</text>
+    <circle cx="702" cy="58" r="11" fill="#faf8f4" stroke="#6b6559" stroke-dasharray="3 2"/>
+    <text x="702" y="62" font-family="monospace" font-size="9" fill="#6b6559" text-anchor="middle">MJ</text>
+  </g>
+
+  <!-- sidebar: folders -->
+  <path d="M196 76 V460" stroke="#e2ddd2"/>
+  <g font-family="monospace" font-size="10" fill="#6b6559">
+    <text x="62" y="108">FOLDERS</text>
+  </g>
+  <rect x="56" y="122" width="124" height="26" rx="3" fill="#f0ece3"/>
+  <text x="68" y="139" font-family="monospace" font-size="11" fill="#23211d">Personal</text>
+  <g font-family="monospace" font-size="11" fill="#4a463f">
+    <text x="68" y="171">Reading</text>
+    <text x="68" y="199">Shared</text>
+    <text x="68" y="227">Archive</text>
+  </g>
+  <circle cx="171" cy="195" r="7" fill="#6b7f6b"/>
+  <text x="171" y="199" font-family="monospace" font-size="8" fill="#faf8f4" text-anchor="middle">3</text>
+
+  <!-- note list -->
+  <path d="M356 76 V460" stroke="#e2ddd2"/>
+  <g font-family="monospace" font-size="10" fill="#6b6559">
+    <text x="216" y="108">NOTES</text>
+  </g>
+  <rect x="210" y="122" width="132" height="46" rx="3" fill="#f0ece3"/>
+  <text x="222" y="140" font-family="Georgia, serif" font-size="11" fill="#23211d">Reflection on the</text>
+  <text x="222" y="156" font-family="Georgia, serif" font-size="11" fill="#23211d">Month of June</text>
+  <g font-family="Georgia, serif" font-size="11" fill="#4a463f">
+    <text x="222" y="192">My Goals for Next Year</text>
+    <text x="222" y="224">Books, half-finished</text>
+    <text x="222" y="256">Letters I never sent</text>
+  </g>
+  <g stroke="#e2ddd2">
+    <path d="M210 206 H342"/><path d="M210 238 H342"/><path d="M210 270 H342"/>
+  </g>
+
+  <!-- open note -->
+  <text x="382" y="112" font-family="Georgia, serif" font-size="17" fill="#23211d">Reflection on the Month of June</text>
+  <path d="M382 126 H730" stroke="#e2ddd2"/>
+
+  <!-- body lines: the note itself -->
+  <g stroke="#d3ccbe" stroke-linecap="round">
+    <path d="M382 152 H712"/>
+    <path d="M382 172 H730"/>
+    <path d="M382 192 H648"/>
+    <path d="M382 224 H700"/>
+    <path d="M382 244 H730"/>
+    <path d="M382 264 H596"/>
+    <path d="M382 296 H716"/>
+    <path d="M382 316 H660"/>
+  </g>
+
+  <!-- a line being written right now, with cursor -->
+  <path d="M382 348 H548" stroke="#455946" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M556 338 V358" stroke="#455946" stroke-width="2"/>
+
+  <!-- margin presence: who is reading which line -->
+  <g>
+    <circle cx="748" cy="172" r="9" fill="#6b7f6b"/>
+    <text x="748" y="176" font-family="monospace" font-size="8" fill="#faf8f4" text-anchor="middle">AR</text>
+    <circle cx="748" cy="296" r="9" fill="#faf8f4" stroke="#6b6559" stroke-dasharray="3 2"/>
+    <text x="748" y="300" font-family="monospace" font-size="8" fill="#6b6559" text-anchor="middle">MJ</text>
+    <circle cx="748" cy="348" r="9" fill="#455946"/>
+    <text x="748" y="352" font-family="monospace" font-size="8" fill="#faf8f4" text-anchor="middle">SK</text>
+  </g>
+
+  <!-- highlight showing someone else's selection -->
+  <rect x="382" y="238" width="150" height="13" rx="2" fill="#6b7f6b" opacity="0.28"/>
+
+  <!-- footer note: the offline one -->
+  <path d="M382 404 H730" stroke="#e2ddd2"/>
+  <text x="382" y="428" font-family="monospace" font-size="10" fill="#6b6559">MJ is offline · 4 edits waiting, nothing lost</text>
+  <text x="382" y="446" font-family="monospace" font-size="10" fill="#455946">everyone else sees the note as it is typed</text>
+</svg>

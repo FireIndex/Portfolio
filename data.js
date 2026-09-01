@@ -37,7 +37,7 @@ const PORTFOLIO = {
   hero: {
     label: "Portfolio / 2026",
     headline:
-      "Building intelligent systems at the intersection of data, machine learning & software.",
+      "Building real-time trading systems that stay correct when things fail.",
     intro:
       "I am a backend engineer working on real-time trading infrastructure — market data ingestion, order-state tracking, trade replication. Most of my work is the unglamorous middle of the stack: the part that has to stay correct when a packet is dropped, a broker goes quiet, or five hundred accounts need the same answer at once. I care about systems that keep working when something fails, because in this domain something always does.",
     actions: [
@@ -112,6 +112,7 @@ const PORTFOLIO = {
             label: "Live demo",
             href: "https://mansik-santulan-score-site.onrender.com/",
           },
+          { label: "Video demo", href: "https://vimeo.com/1223057127" },
           {
             label: "GitHub",
             href: "https://github.com/FireIndex/Mansik-Santulan-Score",
@@ -127,15 +128,18 @@ const PORTFOLIO = {
         kind: "Collaborative Note-Taking App",
         description:
           "A full-stack note-taking application with a React front end, an Express API and MySQL storage. Built around collaboration and offline-tolerant editing — the interesting problems were state synchronisation and making the editor feel immediate rather than networked.",
-        outcome: "Deployed and open source.",
+        outcome: "Built and deployed privately; source and deployment are not public.",
         tech: ["React", "Express.js", "MySQL"],
         year: "2023",
         links: [
-          { label: "Live demo", href: "https://writer.up.railway.app/" },
-          { label: "GitHub", href: "https://github.com/FireIndex/writer" },
+          { label: "Video demo", href: "https://vimeo.com/1223057147" },
+          {
+            label: "Synopsis (PDF)",
+            href: "https://drive.google.com/file/d/1HwRB8ThHEnNjGHxmb38HfzZ_mkrlswLr/view?usp=sharing",
+          },
         ],
-        image: "assets/work-writer.webp",
-        alt: "Screenshot of the Writer note-taking application interface.",
+        image: "assets/work-writer.svg",
+        alt: "The Writer editor: a folder sidebar, a list of notes, and an open note titled “Reflection on the Month of June”. Three people are in the note at once — their initials sit in the margin beside the lines they are reading, one highlights a passage, and a fourth line is being typed live. MJ is offline, with four edits waiting and nothing lost.",
       },
       {
         featured: true,
@@ -148,7 +152,7 @@ const PORTFOLIO = {
           "Published on PyPI with zero runtime dependencies; encoding, encryption and hashing modules on the roadmap.",
         tech: ["Python", "PyPI"],
         year: "2025",
-        links: [{ label: "GitHub", href: "https://github.com/FireIndex" }],
+        links: [{ label: "GitHub", href: "https://github.com/FireIndex/MissButterfly" }],
         image: "assets/work-butterfly.svg",
         alt: "Diagram: input passing through a salted shuffle and Caesar shift to masked output, with a dashed reversible return path.",
       },
@@ -218,9 +222,10 @@ const PORTFOLIO = {
             label: "Live demo",
             href: "https://fireindex-indias-crime-trend-dashboard.streamlit.app/",
           },
+          { label: "Video demo", href: "https://vimeo.com/1223057077" },
           {
             label: "GitHub",
-            href: "https://github.com/FireIndex/Indias-Crime-Trend-Dashboard",
+            href: "https://github.com/FireIndex/Models/tree/main/0.%20data-science/3_Indias_Crime_Trend_Streamlit_Dashboard",
           },
         ],
         image: "assets/work-crime.webp",
@@ -241,29 +246,14 @@ const PORTFOLIO = {
             label: "Live demo",
             href: "https://fireindex-ipl-dashboard.streamlit.app/",
           },
+          { label: "Video demo", href: "https://vimeo.com/1223057074" },
           {
             label: "GitHub",
-            href: "https://github.com/FireIndex/Data-Science-Projects/tree/main/1_IPL_Streamlit_Dashboard",
+            href: "https://github.com/FireIndex/Models/tree/main/0.%20data-science/1_IPL_Streamlit_Dashboard",
           },
         ],
         image: "assets/work-ipl.webp",
         alt: "Screenshot of the IPL insights dashboard showing team and player statistics.",
-      },
-      {
-        featured: false,
-        context: "personal",
-        name: "SuperMovie",
-        kind: "Movie Catalogue Dashboard",
-        description:
-          "A React dashboard over The Movie Database API with full CRUD on a Firebase-backed catalogue, reconciling read-only remote data with mutable local state.",
-        outcome: "Open source.",
-        tech: ["React", "Firebase", "TMDB API"],
-        year: "2022",
-        links: [
-          { label: "GitHub", href: "https://github.com/FireIndex/SuperMovie" },
-        ],
-        image: "assets/work-movie.webp",
-        alt: "Screenshot of the SuperMovie dashboard showing a grid of film entries.",
       },
       {
         featured: false,
@@ -276,6 +266,7 @@ const PORTFOLIO = {
         tech: ["Power BI", "MS Excel"],
         year: "2024",
         links: [
+          { label: "Video demo", href: "https://vimeo.com/1223057193" },
           {
             label: "Files",
             href: "https://drive.google.com/drive/folders/1DoCLfmNYwdyRIuWq2E43YKGKProQRyz4?usp=drive_link",
