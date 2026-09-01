@@ -112,7 +112,7 @@ const PORTFOLIO = {
             label: "Live demo",
             href: "https://mansik-santulan-score-site.onrender.com/",
           },
-          { label: "Video demo", href: "https://vimeo.com/1223057127" },
+          { label: "Video demo", href: "https://player.vimeo.com/video/1223057127" },
           {
             label: "GitHub",
             href: "https://github.com/FireIndex/Mansik-Santulan-Score",
@@ -132,7 +132,7 @@ const PORTFOLIO = {
         tech: ["React", "Express.js", "MySQL"],
         year: "2023",
         links: [
-          { label: "Video demo", href: "https://vimeo.com/1223057147" },
+          { label: "Video demo", href: "https://player.vimeo.com/video/1223057147" },
           {
             label: "Synopsis (PDF)",
             href: "https://drive.google.com/file/d/1HwRB8ThHEnNjGHxmb38HfzZ_mkrlswLr/view?usp=sharing",
@@ -222,7 +222,7 @@ const PORTFOLIO = {
             label: "Live demo",
             href: "https://fireindex-indias-crime-trend-dashboard.streamlit.app/",
           },
-          { label: "Video demo", href: "https://vimeo.com/1223057077" },
+          { label: "Video demo", href: "https://player.vimeo.com/video/1223057077" },
           {
             label: "GitHub",
             href: "https://github.com/FireIndex/Models/tree/main/0.%20data-science/3_Indias_Crime_Trend_Streamlit_Dashboard",
@@ -246,7 +246,7 @@ const PORTFOLIO = {
             label: "Live demo",
             href: "https://fireindex-ipl-dashboard.streamlit.app/",
           },
-          { label: "Video demo", href: "https://vimeo.com/1223057074" },
+          { label: "Video demo", href: "https://player.vimeo.com/video/1223057074" },
           {
             label: "GitHub",
             href: "https://github.com/FireIndex/Models/tree/main/0.%20data-science/1_IPL_Streamlit_Dashboard",
@@ -266,7 +266,7 @@ const PORTFOLIO = {
         tech: ["Power BI", "MS Excel"],
         year: "2024",
         links: [
-          { label: "Video demo", href: "https://vimeo.com/1223057193" },
+          { label: "Video demo", href: "https://player.vimeo.com/video/1223057193" },
           {
             label: "Files",
             href: "https://drive.google.com/drive/folders/1DoCLfmNYwdyRIuWq2E43YKGKProQRyz4?usp=drive_link",
