@@ -143,6 +143,23 @@ const PORTFOLIO = {
       },
       {
         featured: true,
+        context: "personal",
+        name: "Spade Club",
+        kind: "Offline Card Game, Web + Native — Vibe-Coded",
+        description:
+          "Classic Spades against computer opponents, from one TypeScript codebase shipped to web, Android and iOS via Capacitor. Vibe-coded with Claude: the architecture, rule verification and test strategy were directed and reviewed rather than hand-typed line by line. The Advanced bot tracks every card played and, before each bid and card, simulates hundreds of possible deals of the cards it can't see to weigh how likely a card is to be trumped. Rules are checked three ways: hand-built cases, an exhaustive test of all ~6.5 million possible 4-card trick orderings per deck, and a 144-game referee that audits every state change for legality.",
+        outcome:
+          "Advanced beats Intermediate in 95% of games and Beginner in 100%, measured over 120 games per match-up. Fully offline after first load — no accounts, ads, analytics or network requests.",
+        tech: ["TypeScript", "Vite", "Capacitor", "PWA"],
+        year: "2026",
+        links: [
+          { label: "Live demo", href: "https://spade-club.onrender.com/" },
+        ],
+        image: "assets/work-spade.png",
+        alt: "Spade Club home screen: a fanned hand of five spade cards above the Spade Club wordmark.",
+      },
+      {
+        featured: true,
         context: "open-source",
         name: "Butterfly",
         kind: "Data Masking Library",
