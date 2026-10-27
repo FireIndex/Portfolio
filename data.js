@@ -145,12 +145,12 @@ const PORTFOLIO = {
         featured: true,
         context: "personal",
         name: "Spade Club",
-        kind: "Offline Card Game, Web + Native — Vibe-Coded",
+        kind: "Offline Card Game, Browser-Based — Vibe-Coded",
         description:
-          "Classic Spades against computer opponents, from one TypeScript codebase shipped to web, Android and iOS via Capacitor. Vibe-coded with Claude: the architecture, rule verification and test strategy were directed and reviewed rather than hand-typed line by line. The Advanced bot tracks every card played and, before each bid and card, simulates hundreds of possible deals of the cards it can't see to weigh how likely a card is to be trumped. Rules are checked three ways: hand-built cases, an exhaustive test of all ~6.5 million possible 4-card trick orderings per deck, and a 144-game referee that audits every state change for legality.",
+          "Classic Spades against computer opponents, built to replace the ad-stuffed or weak-AI Spades apps I couldn't find a decent alternative to. Vibe-coded with Claude: the architecture, rule verification and test strategy were directed and reviewed rather than hand-typed line by line. The Advanced bot tracks every card played and, before each bid and card, simulates hundreds of possible deals of the cards it can't see to weigh how likely a card is to be trumped. Rules are checked three ways: hand-built cases, an exhaustive test of all ~6.5 million possible 4-card trick orderings per deck, and a 144-game referee that audits every state change for legality. Shipped as a browser PWA, installable to a phone's home screen, rather than the Android/iOS app stores — no ad revenue to justify the fees, and no account on the platform it would need.",
         outcome:
-          "Advanced beats Intermediate in 95% of games and Beginner in 100%, measured over 120 games per match-up. Fully offline after first load — no accounts, ads, analytics or network requests.",
-        tech: ["TypeScript", "Vite", "Capacitor", "PWA"],
+          "Advanced beats Intermediate in 95% of games and Beginner in 100%, measured over 120 games per match-up. Runs fully offline after first load — no accounts, ads, analytics or network requests, and all data stays on-device.",
+        tech: ["TypeScript", "Vite", "PWA"],
         year: "2026",
         links: [
           { label: "Live demo", href: "https://spade-club.onrender.com/" },
