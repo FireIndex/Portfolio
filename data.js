@@ -11,13 +11,13 @@ const PORTFOLIO = {
   meta: {
     name: "Sundram Kumar",
     monogram: "SK",
-    role: "Backend & Quantitative Python Engineer",
+    role: "AI Engineer — GenAI & Agentic Systems",
     location: "Delhi, India",
     timezone: "IST · UTC+5:30",
     year: "2026",
     url: "https://fireindex.github.io/Portfolio",
     description:
-      "Portfolio of Sundram Kumar - backend and quantitative Python engineer building real-time trading infrastructure, low-latency data pipelines and distributed services.",
+      "Portfolio of Sundram Kumar - AI engineer building GenAI and agentic applications on top of production-grade backend and real-time data systems.",
     ogImage: "assets/og.svg",
     available: true,
     availableLabel: "Open to opportunities",
@@ -37,14 +37,14 @@ const PORTFOLIO = {
   hero: {
     label: "Portfolio / 2026",
     headline:
-      "Building real-time trading systems that stay correct when things fail.",
+      "Building AI agents and LLM applications on backends that stay correct when things fail.",
     intro:
-      "I am a backend engineer working on real-time trading infrastructure — market data ingestion, order-state tracking, trade replication. Most of my work is the unglamorous middle of the stack: the part that has to stay correct when a packet is dropped, a broker goes quiet, or five hundred accounts need the same answer at once. I care about systems that keep working when something fails, because in this domain something always does.",
+      "I am an AI engineer who comes from production backend work. I build GenAI and agentic applications — multi-agent pipelines that search, read, write and critique, and ML models served behind real APIs — and I have spent the last two years running live trading infrastructure where a dropped packet or a quiet broker cannot be allowed to corrupt state. That background is what I bring to AI systems: tool-calling that is reliable, outputs that are checked rather than trusted, and services that keep working when something fails.",
     actions: [
-      { label: "View selected work", href: "#work", primary: true },
+      { label: "View AI projects", href: "#work", primary: true },
       { label: "Get in touch", href: "#contact", primary: false },
     ],
-    meta: ["Based in Delhi, India", "Python / FastAPI / Redis", "Open to opportunities"],
+    meta: ["Based in Delhi, India", "Python / LangChain / FastAPI", "Open to AI roles"],
   },
 
   about: {
@@ -59,10 +59,10 @@ const PORTFOLIO = {
     focus: {
       label: "Current focus",
       items: [
-        "Real-time data streaming",
-        "Distributed & fault-tolerant services",
-        "Order management systems",
-        "Quantitative & ML tooling",
+        "GenAI & agentic applications",
+        "LLM tool-calling & multi-agent pipelines",
+        "Machine learning & model serving",
+        "Reliable, fault-tolerant AI backends",
       ],
     },
     expertise: {
@@ -99,6 +99,28 @@ const PORTFOLIO = {
       {
         featured: true,
         context: "personal",
+        name: "Dig",
+        kind: "Multi-Agent Research Assistant",
+        description:
+          "Give it a topic and it searches the web, reads the best source, writes a structured report, then has a critic score that report out of ten. The search and reader steps are tool-calling LangChain agents; the writer and critic are plain LLM chains, composed into a small agentic pipeline behind a Streamlit interface. Runs on OpenAI or Groq with a single environment switch.",
+        outcome:
+          "Deployed and publicly usable. Honest about its limits: one search and one scrape per run, so narrow topics score better, and the critic's score is an LLM's opinion rather than an objective metric.",
+        tech: ["Python", "LangChain", "Tavily", "Streamlit"],
+        year: "2026",
+        links: [
+          { label: "Live demo", href: "https://deep-research-agent-awsr.onrender.com" },
+          { label: "Video demo", href: "https://player.vimeo.com/video/1249051970" },
+          {
+            label: "GitHub",
+            href: "https://github.com/FireIndex/dig-deep-research-agent",
+          },
+        ],
+        image: "assets/work-dig.png",
+        alt: "Dig home screen: the headline “Ask once. Four agents dig. Get one report.” above a question box and a “Dig it up” button.",
+      },
+      {
+        featured: true,
+        context: "personal",
         name: "Mansik Santulan Score",
         kind: "Student Wellness ML Model",
         description:
@@ -124,26 +146,6 @@ const PORTFOLIO = {
       {
         featured: true,
         context: "personal",
-        name: "Writer",
-        kind: "Collaborative Note-Taking App",
-        description:
-          "A full-stack note-taking application with a React front end, an Express API and MySQL storage. Built around collaboration and offline-tolerant editing — the interesting problems were state synchronisation and making the editor feel immediate rather than networked.",
-        outcome: "Built and deployed privately; source and deployment are not public.",
-        tech: ["React", "Express.js", "MySQL"],
-        year: "2023",
-        links: [
-          { label: "Video demo", href: "https://player.vimeo.com/video/1223057147" },
-          {
-            label: "Synopsis (PDF)",
-            href: "https://drive.google.com/file/d/1HwRB8ThHEnNjGHxmb38HfzZ_mkrlswLr/view?usp=sharing",
-          },
-        ],
-        image: "assets/work-writer.svg",
-        alt: "The Writer editor: a folder sidebar, a list of notes, and an open note titled “Reflection on the Month of June”. Three people are in the note at once — their initials sit in the margin beside the lines they are reading, one highlights a passage, and a fourth line is being typed live. MJ is offline, with four edits waiting and nothing lost.",
-      },
-      {
-        featured: true,
-        context: "personal",
         name: "Spade Club",
         kind: "Offline Card Game, Browser-Based — Vibe-Coded",
         description:
@@ -157,21 +159,6 @@ const PORTFOLIO = {
         ],
         image: "assets/work-spade.png",
         alt: "Spade Club home screen: a fanned hand of five spade cards above the Spade Club wordmark.",
-      },
-      {
-        featured: true,
-        context: "open-source",
-        name: "Butterfly",
-        kind: "Data Masking Library",
-        description:
-          "A dependency-free Python library for masking and obfuscating sensitive data, published on PyPI. Masking is layered — deterministic salted shuffling composed with a Caesar shift — so the same input always produces the same masked output, and the transformation reverses when you hold the salt.",
-        outcome:
-          "Published on PyPI with zero runtime dependencies; encoding, encryption and hashing modules on the roadmap.",
-        tech: ["Python", "PyPI"],
-        year: "2025",
-        links: [{ label: "GitHub", href: "https://github.com/FireIndex/MissButterfly" }],
-        image: "assets/work-butterfly.svg",
-        alt: "Diagram: input passing through a salted shuffle and Caesar shift to masked output, with a dashed reversible return path.",
       },
       {
         featured: true,
@@ -205,8 +192,45 @@ const PORTFOLIO = {
         image: "assets/work-pulsesocket.svg",
         alt: "Architecture diagram: a WebSocket order stream with a dropped packet writing to Redis and PostgreSQL, with a reconciliation loop re-applying corrected state.",
       },
+
+      /* --- catalogue only: archived from the home page ----------- */
       {
-        featured: true,
+        featured: false,
+        context: "personal",
+        name: "Writer",
+        kind: "Collaborative Note-Taking App",
+        description:
+          "A full-stack note-taking application with a React front end, an Express API and MySQL storage. Built around collaboration and offline-tolerant editing — the interesting problems were state synchronisation and making the editor feel immediate rather than networked.",
+        outcome: "Built and deployed privately; source and deployment are not public.",
+        tech: ["React", "Express.js", "MySQL"],
+        year: "2023",
+        links: [
+          { label: "Video demo", href: "https://player.vimeo.com/video/1223057147" },
+          {
+            label: "Synopsis (PDF)",
+            href: "https://drive.google.com/file/d/1HwRB8ThHEnNjGHxmb38HfzZ_mkrlswLr/view?usp=sharing",
+          },
+        ],
+        image: "assets/work-writer.svg",
+        alt: "The Writer editor: a folder sidebar, a list of notes, and an open note titled “Reflection on the Month of June”. Three people are in the note at once — their initials sit in the margin beside the lines they are reading, one highlights a passage, and a fourth line is being typed live. MJ is offline, with four edits waiting and nothing lost.",
+      },
+      {
+        featured: false,
+        context: "open-source",
+        name: "Butterfly",
+        kind: "Data Masking Library",
+        description:
+          "A dependency-free Python library for masking and obfuscating sensitive data, published on PyPI. Masking is layered — deterministic salted shuffling composed with a Caesar shift — so the same input always produces the same masked output, and the transformation reverses when you hold the salt.",
+        outcome:
+          "Published on PyPI with zero runtime dependencies; encoding, encryption and hashing modules on the roadmap.",
+        tech: ["Python", "PyPI"],
+        year: "2025",
+        links: [{ label: "GitHub", href: "https://github.com/FireIndex/MissButterfly" }],
+        image: "assets/work-butterfly.svg",
+        alt: "Diagram: input passing through a salted shuffle and Caesar shift to masked output, with a dashed reversible return path.",
+      },
+      {
+        featured: false,
         context: "work",
         org: "Finesse Stock Broking",
         name: "Replicator",
@@ -222,7 +246,7 @@ const PORTFOLIO = {
         alt: "Architecture diagram: a master account order passing through a cancel-modify-place sequencing gate and fanning out over gRPC to follower accounts.",
       },
 
-      /* --- catalogue only: earlier data & web work --------------- */
+      /* --- catalogue only: earlier data work --------------------- */
       {
         featured: false,
         context: "personal",
@@ -300,6 +324,31 @@ const PORTFOLIO = {
     intro: "Tools I reach for often, grouped by the kind of problem they solve.",
     groups: [
       {
+        label: "GenAI & Agentic AI",
+        items: [
+          "Generative AI",
+          "Agentic AI",
+          "Multi-Agent Systems",
+          "LangChain",
+          "RAG",
+          "LLM Tool Calling",
+          "Prompt Engineering",
+          "OpenAI",
+          "Groq",
+          "Tavily",
+        ],
+      },
+      {
+        label: "Machine Learning & Deep Learning",
+        items: [
+          "Machine Learning",
+          "Deep Learning",
+          "scikit-learn",
+          "Regression Modelling",
+          "Model Serving (FastAPI)",
+        ],
+      },
+      {
         label: "Languages & Core",
         items: ["Python", "SQL", "JavaScript", "AsyncIO", "Multiprocessing", "OOP"],
       },
@@ -307,8 +356,6 @@ const PORTFOLIO = {
         label: "Backend & APIs",
         items: [
           "FastAPI",
-          "Django",
-          "DRF",
           "Pydantic",
           "REST",
           "WebSockets",
@@ -389,7 +436,7 @@ const PORTFOLIO = {
     title: "Contact",
     heading: "Let’s build something interesting.",
     text:
-      "I am open to backend, quantitative and data-heavy engineering roles. If you have a system that has to stay up and stay correct, I would like to hear about it.",
+      "I am open to AI engineering roles — GenAI, agentic systems and applied ML. If you are building something with LLMs that has to stay up and stay correct, I would like to hear about it.",
     email: "sundramkumar8298@gmail.com",
     profiles: [
       { label: "GitHub", href: "https://github.com/FireIndex", handle: "@FireIndex" },
