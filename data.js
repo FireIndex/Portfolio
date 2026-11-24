@@ -121,6 +121,23 @@ const PORTFOLIO = {
       {
         featured: true,
         context: "personal",
+        name: "Earmark",
+        kind: "Meeting Transcription & RAG Assistant",
+        description:
+          "Hand it a meeting recording or a YouTube link and it returns notes — summary, to-dos with owners and deadlines, decisions, open questions — then lets you chat with the meeting, with Whisper transcribing locally. The first version re-sent the whole transcript to the model once per section; now a single structured-output call fills a Pydantic schema, and chat is RAG over a per-meeting Chroma collection. It is built for several people sharing one instance: each browser session keeps its own meetings, and one shared Whisper model queues jobs so the second user sees their place in line instead of a frozen page.",
+        outcome:
+          "One LLM call for transcripts up to 20k characters (roughly 20 minutes of speech), and none for a recording that has already been processed — results are cached by YouTube ID or file content hash and shared across users. Open source; runs locally, no hosted demo.",
+        tech: ["Python", "Whisper", "LangChain", "ChromaDB", "Streamlit"],
+        year: "2026",
+        links: [
+          { label: "GitHub", href: "https://github.com/FireIndex/earmark-ai" },
+        ],
+        image: "assets/work-earmark.webp",
+        alt: "Earmark meeting page: the title “Q3 Launch Planning Sync” above tiles counting to-dos, decisions, open questions and minutes of talk; a summary card and a to-do checklist with owner and date chips on the left, and a chat panel answering “Why did the launch date move?” on the right.",
+      },
+      {
+        featured: true,
+        context: "personal",
         name: "Mansik Santulan Score",
         kind: "Student Wellness ML Model",
         description:
